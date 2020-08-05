@@ -98,9 +98,9 @@ return(
        stats={this.state.homeTeamStats}
        shotHandler={() => this.handleShoot('home')}
        />
-        <div className='resetButton'>
+        <div className='resetDiv'>
            <strong>Resets:</strong> {this.state.resetCount} <br/>
-            <button onClick ={this.resetGame}>Reset Game</button>
+            <button className='resetButton' onClick ={this.resetGame}>Reset Game</button>
        </div>
         <div className='versus'><h1>VS</h1></div>
         <div className='ball1'>🏀</div>

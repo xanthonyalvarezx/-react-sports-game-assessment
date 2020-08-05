@@ -10,7 +10,7 @@ function ScoreBoard(props) {
                 <h3>SCOREBOARD</h3>
                 <h3>VISITORS</h3>
                 <h3>{props.visitingTeamStats.score}</h3>
-            <div className='teamStats'></div>
+         
          </div>
         </div>
     )
