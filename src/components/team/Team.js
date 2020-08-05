@@ -19,7 +19,7 @@ function Team (props){
         <div className='Team'>
             
             <h3>{props.name}</h3>
-            <div className='logo'><img src={props.team.logoSrc} alt="team logo"/></div>
+            <div className='logo'><img src={props.logo} alt="team logo"/></div>
             
            
     

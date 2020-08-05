@@ -2,11 +2,8 @@
 import React, {Component} from 'react'
 import ScoreBoard from '../scoreboard/ScoreBoard'
 import Team from '../team/Team'
-import bulldog from '../../images/bulldog.jpeg';
-import lion from '../../images/Lions.jpeg'
-import polarbears from '../../images/polar-bears.png'
-import theThunder from '../../images/download.jpeg'
-
+import shotSound from '../../Back+Board.mp3'
+import scoreSound from'../../Swish+2.mp3'
 
 
 
@@ -14,22 +11,7 @@ import theThunder from '../../images/download.jpeg'
 class Game extends Component{
     constructor(props){
         super(props)
-        const thunder = {
-            name:"The Thunder",
-            logoSrc:theThunder
-        }
-        const bulldogs = {
-            name:"The Bulldogs",
-            logoSrc:bulldog
-        }
-        const lions = {
-            name:"The Lions",
-            logoSrc:lion
-        }
-        const polarBears = {
-            name:"The Polar Bears",
-            logoSrc:polarbears
-        }
+     
 
         this.state={
             resetCount: 0,
@@ -47,8 +29,8 @@ class Game extends Component{
             
         }
         
-        this.shotSound = new Audio('Back+Board.mp3')
-        this.scoreSound = new Audio('Swish+2.mp3')
+        this.shotSound = new Audio(shotSound)
+        this.scoreSound = new Audio(scoreSound)
             }
     handleShoot = (team) => {  
         const teamStatsKey = `${team}TeamStats`
@@ -110,8 +92,9 @@ return(
         <div className='stats'>
         
         <Team
-        team={thunder}
         
+        name={this.props.homeTeam.name}
+        logo={this.props.homeTeam.logoSrc}
        stats={this.state.homeTeamStats}
        shotHandler={() => this.handleShoot('home')}
        />
