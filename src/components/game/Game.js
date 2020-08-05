@@ -103,8 +103,8 @@ return(
             <button className='resetButton' onClick ={this.resetGame}>Reset Game</button>
        </div>
         <div className='versus'><h1>VS</h1></div>
-        <div className='ball1'>🏀</div>
-        <div className='ball2'>🏀</div>
+        {/* <span role="img" className='ball1'>🏀</span>
+        <span role="img"  className='ball2'>🏀</span> */}
        
        <Team
         name={this.props.visitingTeam.name}
