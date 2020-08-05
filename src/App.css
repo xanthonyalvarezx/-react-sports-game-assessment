@@ -43,7 +43,7 @@ img{
 
 .stats{
     display: flex;
-    border: 1px solid blue;
+    
     width: 1500px;
     justify-content: center;
     align-items: center;
